@@ -124,10 +124,7 @@ digits), the left Z key must be added.
 Here's an example: Press #AN at the same time to enter the number 45; to enter 54, press #ANZ.
 
 
+If you have any theoretical questions or suggestions, please submit them in the #multilingual discussion area of ​​[Plover Discord
+Community](https://discord.com/invite/0lQde43a6dGmAMp2).
 
-
-
-
-
-若有理論上之問題與建議，請在[Plover Discord社群](https://discord.com/invite/0lQde43a6dGmAMp2)的#multilingual討論區提出。
 
