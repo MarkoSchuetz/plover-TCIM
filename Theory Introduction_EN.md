@@ -7,11 +7,13 @@ This steno input method uses Zhuyin as the main input element, and is combined w
 
 Since there are 37 Zhuyin symbols in total, but general steno machines only have about 22 to 28 keys, the keys must be pressed simultaneously to fully express all Zhuyin symbols.
 
-Each Chinese character can be divided into initial symbol and final symbol, and the two do not interfere with each other. Therefore, the initial symbols and final symbols can be discussed separately:
+Each Chinese character can be divided into (a possible empty) consonant symbol and rhyme
+symbol, and the two do not interfere with each other. Therefore, the consonant symbols and
+rhyme symbols can be discussed separately:
 
-### Initial symbols
+### Consonant symbols
 
-The input of initial symbols only requires four keys, namely ㄅ, ㄆ, ㄇ, ㄈ and the change
+The input of consonant symbols only requires four keys, namely ㄅ, ㄆ, ㄇ, ㄈ and the change
 key: "變".
 
 The input method is as follows:
@@ -25,15 +27,15 @@ The input method is as follows:
 | `MF`                      | ㄑ、ㄘ         | ㄔ                     |
 | `BPMF`                    | ㄒ、ㄙ         | ㄕ                     |
 
-* Since ㄗ, ㄘ, ㄙ and ㄐ, ㄑ, ㄒ do not appear with common finals in Chinese, the two sets of initial symbols are overlaid on the same encodings.
+* Since ㄗ, ㄘ, ㄙ and ㄐ, ㄑ, ㄒ do not appear with common rhymes in Chinese, the two sets of consonant symbols are overlaid on the same encodings.
 
 According to the description above, a simplified diagram can be drawn as follows:
 
 ![Initials Graph.jpeg](https://github.com/Quisette/TC_steno/blob/master/Pictures/Initials%20Graph.jpeg?raw=true)
 
-### Finals and segmentation
+### Rhyme and segmentation
 
-Since Chinese finals include many compound sounds (such as ㄞ, ㄟ, ㄠ, ㄡ, ㄢ, ㄤ, ㄣ, ㄥ,
+Since Chinese rhymes include many compound sounds (such as ㄞ, ㄟ, ㄠ, ㄡ, ㄢ, ㄤ, ㄣ, ㄥ,
 etc.), by converting them into (monosyllabic) segments, they can be input with fewer keystrokes.  Therefore, two official symbols that are no longer common
 in modern Chinese are introduced here:
 
@@ -42,7 +44,7 @@ in modern Chinese are introduced here:
 | ㄯ                | 即ㄢ、ㄣ之尾音 | ㄢ＝ㄚㄯ、ㄣ＝ㄜㄯ |
 | ㆭ                | 即ㄤ、ㄥ之尾音 | ㄤ＝ㄚㆭ、ㄥ＝ㄜㆭ |
 
-And define several "final segments"(TODO:check translation) and their encodings as follows:
+And define several "rhyme segments" and their encodings as follows:
 
 | phonetic | encoding | remark                                           |
 |----------|----------|--------------------------------------------------|
@@ -52,7 +54,7 @@ And define several "final segments"(TODO:check translation) and their encodings 
 | ㄚ       | `A`      |                                                  |
 | ㄛ       | `AE`     | ㄚ、and tap ㄜ to type ㄛ                               |
 | ㄜ       | `E`      |                                                  |
-| ㄝ       | `E`      | the final 'ㄝ' is only used in '誒', so it shares the encoding with 'ㄜ'|
+| ㄝ       | `E`      | the rhyme 'ㄝ' is only used in '誒', so it shares the encoding with 'ㄜ'|
 | ㄯ       | `N`      |                                                  |
 | ㆭ       | `G`      |                                                  |
 | ㄦ       | `NG`     | ㄯ、and tap ㆭ to type ㄦ                               |
@@ -71,12 +73,12 @@ All compound phonetic symbols are listed below:
 | ㄥ            | ㄜㆭ                    | `EG`     |
 
 * "compound sound segments": refers to the way of expressing compound sounds
-and finals with elemental finals
+and rhymes with elemental rhymes
 
 
-### Compound finals
+### Compound rhymes
 
-The so-called compound finals refer to the finals composed of two  finals. Generally speaking, they can be combined by the above codes.
+The so-called compound rhyme refer to the rhymes composed of two rhymes. Generally speaking, they can be combined by the above codes.
 
 However, there are still some encoding conflicts in this system, which requires humans to
 memorize the following rules:
@@ -103,7 +105,7 @@ The keyboard layout is as follows:
 ![Layout.jpeg](https://github.com/Quisette/TC_steno/blob/master/Pictures/Layout.jpeg?raw=true)
 
 Note that the keyboard is symmetrical, so you need to type both sides. If you want to type
-only one word, just type "變" on the right side. TODO: what's that key on a Gemini PR keyboard?
+only one word, just type "變" on the right side. 
 
 To delete the previous word, press the "變" key on both sides.
 
